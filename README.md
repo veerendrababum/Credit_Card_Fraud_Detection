@@ -16,7 +16,7 @@ It contains 31 features in total. Because of the confidentiality issues 28 featu
 # Confusion Matrix:
 A Confusion matrix is used for evaluating the performance of a classification model. The matrix compares the actual target values with those predicted by the machine learning model. This gives us a holistic view of how well our classification model is performing and what kinds of errors it is making.
 
-![](images/confusion_matrix)
+![](images/confusion_matrix.PNG)
 
 
 Here,
@@ -33,17 +33,17 @@ False Positive (FP) : Observation is negative, but is predicted positive.
 # Classification Rate/Accuracy:
 Classification Rate or Accuracy is given by the relation:
 
-![](images/accuracy)
+![](images/accuracy.png)
  
 # Recall:
  
 Recall tells us how many of the actual positive cases we were able to predict correctly with our model. High Recall indicates the class is correctly recognized (a small number of FN).
 
-![](images/recall)
+![](images/recall.png)
 
 # Precision:
 
-![](images/precission)
+![](images/precission.png)
  
 Precision tells us how many of the correctly predicted cases actually turned out to be positive. High Precision indicates an example labelled as positive is indeed positive (a small number of FP).
 
