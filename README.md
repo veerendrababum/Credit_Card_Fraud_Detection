@@ -122,7 +122,7 @@ Trained the logistic regression model with 80% random sample data taken from the
 
 Its clear that the logistic regression model showed low performance when trained with 80% data taken from whole data with true fraud detection rate(recall rate) of 58. Logistic regression Model performed well when we trained with undersampled data with high recall rate of 93%. The same will be applicable for other classification models as well when we are dealing with unbalanced data. Moving forward we will use the undersampled data to train the different classification models.
 
-# 3.1.3 Build and test the following models using the default parameters
+# 3.1.2 Build and test the following models using the default parameters
 
 Trained Logistic Regression, k-nearest neighbors(KNN), Decision Tree, Support Vector Machine(SVM) default models using the undersample train data and validated the models using undersample test data
 
@@ -175,7 +175,7 @@ Deployed and tested the logistic regression model with threshold 0.84
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/perfm_mrx_final_model.PNG" width="450" height = "200"> 
 
-# Conclusion: Hyperparameter optimization and thershold change helped us to reduce the logistic regression model misclasification of non fraud transactions (in original dataframe test data) from 2183 to 134 transactions and also precission score improved from 0.04%(default) to 0.39%. Now, logisitic regression model can classify the fraud transactions with minimum number of misclasification. However, in order to improve the precission score we have bring down our recall score from 93% to 87%. 
+# Conclusion: Hyperparameter optimization and thershold change helped us to reduce the logistic regression model misclasification of non fraud transactions (in original dataframe test data) from 2183 to 134 transactions and also precission score improved from 0.04%(default) to 0.39%. However, in order to to make our model more stabilised and to improve the precission score we have bring down our recall score from 93% to 87%. Now, logisitic regression model can classify the fraud transactions with minimum number of misclassifications of non fraud transactions.
 
 # Next steps: 
 Conduct research and identify the better techniques to improve the accuracy of model which can give even better precission and recall score to identify the fraud transactions. 
