@@ -173,7 +173,8 @@ Deployed and tested the logistic regression model with threshold 0.84
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/perfm_mrx_final_model.PNG" width="450" height = "200"> 
 
-# Conclusion: Hyperparameter optimization and thershold change helped us to reduce the logistic regression model misclasification of non fraud transactions (in original dataframe test data) from 2183 to 134 transactions and also precission score improved from 0.04%(default) to 0.39%. However, in order to to make our model more stabilised and to improve the precission score we have bring down our recall score from 93% to 87%. Now, logisitic regression model can classify the fraud transactions with minimum number of misclassifications of non fraud transactions.
+# Conclusion: 
+Hyperparameter optimization and thershold change helped us to reduce the logistic regression model misclasification of non fraud transactions (in original dataframe test data) from 2183 to 134 transactions and also precission score improved from 0.04%(default) to 0.39%. However, in order to to make our model more stabilised and to improve the precission score we have bring down our recall score from 93% to 87%. Now, logisitic regression model can classify the fraud transactions with minimum number of misclassifications of non fraud transactions.
 
 # Next steps: 
 Conduct research and identify the better techniques to improve the accuracy of model which can give even better precission and recall score to identify the fraud transactions. 
