@@ -141,10 +141,37 @@ Even on the original dataframe test data, logistic regression model showed best 
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_lgr_org_test_grid.PNG" width="400" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_mtrx_decs_tree_grid.PNG" width="400" height = "425"> 
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_svc_grid.PNG" width="375" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_knn_grid.PNG" width="375" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_svc_grid.PNG" width="390" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_knn_grid.PNG" width="390" height = "425"> 
 
 
 Tuned Logistic regression performed well compared with tuned KNN, Decission Tree, and SVM models using GridSearchCV. On original dataframe test data, logistic regresion model identified the 91 fraud transactions out of 98 transactions with recall score of 93% and also it showed best performance to classify the non fraud precission by correctly identifying 55,635 transactions out of total non fraud(56,864) transactions. Logistic regression model did very well to identify the fruad transactions and in the same time model wrongly classified 1229 non fraud transactions as fraud transactions out of total non fraud(56,864) transactions and in terms of statistics, the model misclassifed only 0.02% of non fraud transactions. But in terms of business, there will be chances in production our model can classify the non fraud transactions as fraud transactions and it might end up blocking the customer's card, ulimately it takes the good customers away from the merchants. So its important to make our model to reduce the misclassifcation of non fraud transactions as much as possible since its very important for financial organization to address the risk along with customer satisfaction. 
 
 Lets plot the precision recall curve to review both precision and recall of Logistic Regression at different thresholds and it will be useful since there is an imbalance in the observations between the two classes. Specifically, there are many examples of no event (class 0) and only a few examples of an event (class 1). 
+
+# 3.3 Plot precission recall curve
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/precission_recall_curve.PNG" width="375" height = "425"> 
+
+Precission recall curve showed us visually that there are thresholds where logistic regression model showed decent precision and recall scores. Lets identify the best threshold for our logistic regression model and printed the metrices in the follwing order threshold, f1, accuracy, recission, precision
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/thresholds.PNG" width="375" height = "425"> 
+
+Looking at the thresholds, we can make our model stabilized if we use threshold value as 0.84(Recall - 86.73, Precision-39.35). It will be always good to have balanced model even though changing the threshold from 0.5(default) to 0.84 brings down the recall percentage from 93 to 86.73 but the precision score is jumped from 0.07 to 0.39. Lets deploy and test our logistic regression model with threshold 0.84
+
+# 4. Deploy
+
+Deployed and tested the logistic regression model with threshold 0.84
+
+## 4.1.1 Calculated and ploted confusion matrix for final logistic regression model
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_mtrx_final.PNG" width="400" height = "425"> 
+
+## 4.1.2 Performance metrics of final Logistic Regression Model
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/perfm_mrx_final_model.PNG" width="375" height = "425"> 
+
+# Conclusion: Hyperparameter optimization and thershold change helped us to reduce the logistic regression model misclasification of non fraud transactions (in original dataframe test data) from 2183 to 134 transactions and also precission score improved from 0.04%(default) to 0.39%. Now, logisitic regression model can classify the fraud transactions with minimum number of misclasification. However, in order to improve the precission score we have bring down our recall score from 93% to 87%. 
+
+# Next steps: 
+Conduct research and identify the better techniques to improve the accuracy of model which can give even better precission and recall score to identify the fraud transactions. 
 
