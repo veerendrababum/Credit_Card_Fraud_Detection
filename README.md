@@ -57,3 +57,4 @@ Precision tells us how many of the correctly predicted cases actually turned out
 
 Detecting the missing values
 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/missing_values-img1.PNG" width="250" height = "400"><img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/missing_values-img2.PNG" width="250" height = "400"><img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/missing_values-img3.PNG" width="250" height = "400">
