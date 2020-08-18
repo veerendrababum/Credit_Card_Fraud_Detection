@@ -90,7 +90,7 @@ Using heat map, examined the correlation between the variables to make sure ther
 
 From the heat map we have observed that all diagonal elements shown strong collinearity since it shows the collinearity between the same variables. We also noticed that there is correlation between Time and V3, Amount and V2,Amount and V5, Amount and V7, Amount and V20. Lets find out the exact correlation coefficient to make sure whether we can consider these correlations or not
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/correlation_values.PNG" width="400" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/correlation_values.PNG" width="550" height = "425"> 
 
 # 3. Develop
       3.1 Develop and Test Default Models
@@ -125,13 +125,13 @@ Trained Logistic Regression, k-nearest neighbors(KNN), Decision Tree, Support Ve
 
 Calculated and ploted the confusion matrix for each model
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Confusion_Matrix_Test_Data_Adjacent.PNG" width="350" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Confusion_Matrix_Test_Data_Adjacent.PNG" width="550" height = "425"> 
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/metrices_all_mdls_adjacent_dflt.PNG" width="350" height = "300"> 
 
 Logistic regression showed best performance on test data with precission score of 95% and recall percentage of 93%. Lets try to check the accuracy of the models by using another large sample of test data.
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_marix_org_test_data_all_mdls.PNG" width="350" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_marix_org_test_data_all_mdls.PNG" width="550" height = "425"> 
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/org_test_data_metrices_all_models.PNG" width="350" height = 300"> 
 
