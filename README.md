@@ -2,6 +2,7 @@
 # Define the problem: 
 Now a days, credit or debit card’s are the most common method of payments. Using payment cards, consumers can make purchases in-store or online or in-app and it made life easier. On the other side, fraudsters are finding different ways to steal the customer credit/debit card information to make fraudulent purchases. Card fraud is the biggest challenge for organizations particularly those in banking, finance, retail, and e-commerce. Payment card fraud loss reached to $27.85 billion in 2018 across the worldwide and are projected to $35.67 billion in five years and $40.63 in 10 years according to the The Nilson Report, the leading global card and mobile payments trade publication. However, fraud losses per $100 of total sales declined to 6.86¢ from 6.95¢ the prior year.
 
+2019 Nelson Report:
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/nelson_report_2019.jpg" width="550" height = "550">
 
 Source: https://www.prnewswire.com/news-releases/payment-card-fraud-losses-reach-27-85-billion-300963232.html
@@ -58,3 +59,10 @@ Precision tells us how many of the correctly predicted cases actually turned out
 Detecting the missing values
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/missing_values-img1.PNG" width="250" height = "425">         <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/missing_values-img2.PNG" width="250" height = "425">       <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/missing_values-img3.PNG" width="250" height = "425">
+
+There is no missing data in the given data set
+
+Checking the format of the data types
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/datatypes.PNG" width="250" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/dataframe_img1.PNG" width="250" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/dataframe_img2.PNG" width="250" height = "425">
+All columns data types have the correct data types and it makes sense to have data types as only int and float since the data set contains only numerical variables(V1 to V28 are transformed with PCA so they are only float type and we observed time and amount columns have numerical values of type float and our response varibale "Class" has two values Fraud - 1, Not Fraud - 0 so it is integer type). Lets move to the next step
