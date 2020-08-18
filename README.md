@@ -145,6 +145,10 @@ Tuned logistic regression model using GridSearchCV showed recall score of 93% an
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_mtx_lgr_testdata.PNG" width="250" height = "425"> 
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_lgr_org_test_grid.PNG" width="250" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/grid_lgr_metric_test_data.PNG" width="250" height = "425"> 
 
 Lets see how the model will behave with original test data. 
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_lgr_org_test_grid.PNG" width="250" height = "425"> 
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/grid_lgr_perfomance_metric.PNG" width="250" height = "425"> 
