@@ -19,21 +19,16 @@ A Confusion matrix is used for evaluating the performance of a classification mo
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_matrix.PNG" width="250" height = 300">
 
-Here-
-Class 1 : Positive\n
-Class 2 : Negative
+Here,
+* Class 1 : Positive\n
+* Class 2 : Negative
 Definition of the Terms:
-Positive (P) : Observation is positive (for example: is an apple).
-Negative (N) : Observation is not positive (for example: is not an apple).
-True Positive (TP) : Observation is positive, and is predicted to be positive.
-False Negative (FN) : Observation is positive, but is predicted negative.
-True Negative (TN) : Observation is negative, and is predicted to be negative.
-False Positive (FP) : Observation is negative, but is predicted positive.
-
-## Classification Rate/Accuracy:
-Classification Rate or Accuracy is given by the relation:
-
-![](images/accuracy.png)
+* Positive (P) : Observation is positive (for example: is an apple).
+* Negative (N) : Observation is not positive (for example: is not an apple).
+* True Positive (TP) : Observation is positive, and is predicted to be positive.
+* False Negative (FN) : Observation is positive, but is predicted negative.
+* True Negative (TN) : Observation is negative, and is predicted to be negative.
+* False Positive (FP) : Observation is negative, but is predicted positive.
  
 ## Recall:
  
@@ -61,27 +56,35 @@ Precision tells us how many of the correctly predicted cases actually turned out
 
 There is no missing data in the given data set
 
-## 2.1.1 Checking the format of the data types
+## 2.1.2 Checking the format of the data types
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/datatypes.PNG" width="225" height = "425"> 
 
-All columns data types have the correct data types and it makes sense to have data types as only int and float since the data set contains only numerical variables(V1 to V28 are transformed with PCA so they are only float type and we observed time and amount columns have numerical values of type float and our response varibale "Class" has two values Fraud - 1, Not Fraud - 0 so it is integer type). Lets move to the next step
+All columns have the correct data types and it makes sense to have data types as only int and float since the data set contains only numerical variables(V1 to V28 are transformed with PCA so they are only float type and we observed time and amount columns have numerical values of type float and our response varibale "Class" has two values Fraud - 1, Not Fraud - 0 so it is integer type). 
 
 # 2.2 Exploratory Data Analysis
 
 Lets understand the data distribution of non-transformed data- Time, Amount, and Class
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Amount_Distribution.PNG" width="400" height = "425"> 
+# 2.2.1 Distribution of transaction amount
 
 Distribution shows that most of the transaction are below 70 dollars so there might be chances fraudsters tries to mix up with this group and makes fraudlent transaction with below 70 dollars amount
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Time_Distribution.PNG" width="400" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Amount_Distribution.PNG" width="400" height = "425"> 
+
+# 2.2.2 Distribution of transaction time
 
 Distribution of time for two days shows that most of the transactions are taken place during the daytime and peaked after business hours timing and later it's slowed down until the next day
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Distribution of Fruad Class.PNG" width="400" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Time_Distribution.PNG" width="400" height = "425"> 
+
+# 2.2.3 Distribution of response variable
 
 By seeing the distribution of Class(1-Fraud or 0- Not Fraud) its clear that the data is highly imbalanced.
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Distribution of Fruad Class.PNG" width="400" height = "425"> 
+
+# 2.2.4 Correlation between the variables: 
 
 Using heat map, examined the correlation between the variables to make sure there is no strong collinearity between the independent variables 
 
@@ -113,7 +116,7 @@ Logistic regression model performed well on undersampled test data with recall s
 
 Trained the logistic regression model with 80% random sample data taken from the original data and used the same undersample test data to classify the response variable
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_matrix_org_data_lgr.PNG" width="400" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_matrix_org_data_lgr.PNG" width="425" height = "425"> 
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/precission_recall_score_org_lgr.PNG" width="450" height = "200"> 
 
@@ -125,15 +128,15 @@ Trained Logistic Regression, k-nearest neighbors(KNN), Decision Tree, Support Ve
 
 Calculated and ploted the confusion matrix for each model
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Confusion_Matrix_Test_Data_Adjacent.PNG" width="1050" height = "800"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Confusion_Matrix_Test_Data_Adjacent.PNG" width="800" height = "800"> 
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/metrices_all_mdls_adjacent_dflt.PNG" width="250" height = "250"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/metrices_all_mdls_adjacent_dflt.PNG" width="500" height = "500"> 
 
 Logistic regression showed best performance on test data with precission score of 95% and recall percentage of 93%. Lets try to check the accuracy of the models by using another large sample of test data.
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_marix_org_test_data_all_mdls.PNG" width="1050" height = "800"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_marix_org_test_data_all_mdls.PNG" width="800" height = "800"> 
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/org_test_data_metrices_all_models.PNG" width="250" height = "250"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/org_test_data_metrices_all_models.PNG" width="500" height = "500"> 
 
 Even on the original dataframe test data, logistic regression model showed best performance with good recall percentage of 93. However, the precision score went low for all models. Lets try to improve the accuracy of the models by tuning the parameters.
 
@@ -156,7 +159,7 @@ Precission recall curve showed us visually that there are thresholds where logis
 
 Printed the metrices in the follwing order threshold, f1, accuracy, recission, precision:
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/thresholds.PNG" width="475" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/thresholds.PNG" width="500" height = "425"> 
 
 Looking at the thresholds, we can make our model stabilized if we use threshold value as 0.84(Recall - 86.73, Precision-39.35). It will be always good to have balanced model even though changing the threshold from 0.5(default) to 0.84 brings down the recall percentage from 93 to 86.73 but the precision score is jumped from 0.07 to 0.39. Lets deploy and test our logistic regression model with threshold 0.84
 
@@ -166,11 +169,11 @@ Deployed and tested the logistic regression model with threshold 0.84
 
 ## 4.1.1 Calculated and ploted confusion matrix for final logistic regression model
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_mtrx_final.PNG" width="400" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_mtrx_final.PNG" width="425" height = "400"> 
 
 ## 4.1.2 Performance metrics of final Logistic Regression Model
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/perfm_mrx_final_model.PNG" width="250" height = "250"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/perfm_mrx_final_model.PNG" width="450" height = "200"> 
 
 # Conclusion: Hyperparameter optimization and thershold change helped us to reduce the logistic regression model misclasification of non fraud transactions (in original dataframe test data) from 2183 to 134 transactions and also precission score improved from 0.04%(default) to 0.39%. Now, logisitic regression model can classify the fraud transactions with minimum number of misclasification. However, in order to improve the precission score we have bring down our recall score from 93% to 87%. 
 
