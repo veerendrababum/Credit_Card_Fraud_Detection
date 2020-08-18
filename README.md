@@ -15,7 +15,7 @@ It contains 31 features in total. Because of the confidentiality issues 28 featu
 ## Confusion Matrix
 A Confusion matrix is used for evaluating the performance of a classification model. The matrix compares the actual target values with those predicted by the machine learning model. This gives us a holistic view of how well our classification model is performing and what kinds of errors it is making.
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_matrix.PNG" width="250" height = "300">
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_matrix.PNG" width="250" height = "425">
 
 Here,
 * Class 1 : Positive\n
