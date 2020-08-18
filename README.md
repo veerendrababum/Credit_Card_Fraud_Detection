@@ -139,23 +139,12 @@ Even on the original dataframe test data, logistic regression model showed best 
 
 # 3.2 Hyperparameters tuning
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_lgr_org_test_grid.PNG" width="420" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_knn_grid.PNG" width="400" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_lgr_org_test_grid.PNG" width="400" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_mtrx_decs_tree_grid.PNG" width="400" height = "425"> 
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_mtrx_decs_tree_grid.PNG" width="400" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_svc_grid.PNG" width="400" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_svc_grid.PNG" width="400" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_knn_grid.PNG" width="400" height = "425"> 
+
 
 Tuned Logistic regression performed well compared with tuned KNN, Decission Tree, and SVM models using GridSearchCV. On original dataframe test data, logistic regresion model identified the 91 fraud transactions out of 98 transactions with recall score of 93% and also it showed best performance to classify the non fraud precission by correctly identifying 55,635 transactions out of total non fraud(56,864) transactions. Logistic regression model did very well to identify the fruad transactions and in the same time model wrongly classified 1229 non fraud transactions as fraud transactions out of total non fraud(56,864) transactions and in terms of statistics, the model misclassifed only 0.02% of non fraud transactions. But in terms of business, there will be chances in production our model can classify the non fraud transactions as fraud transactions and it might end up blocking the customer's card, ulimately it takes the good customers away from the merchants. So its important to make our model to reduce the misclassifcation of non fraud transactions as much as possible since its very important for financial organization to address the risk along with customer satisfaction. 
 
 Lets plot the precision recall curve to review both precision and recall of Logistic Regression at different thresholds and it will be useful since there is an imbalance in the observations between the two classes. Specifically, there are many examples of no event (class 0) and only a few examples of an event (class 1). 
-## 3.2.1 Logistic Regression Hyperparameters Tunning
 
-Tuned logistic regression model using GridSearchCV showed recall score of 93% and precission score improved from 95% to 98% on undersample test data when compared with logistic regression test accuracy using default parameters. 
-
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_mtx_lgr_testdata.PNG" width="350" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_lgr_org_test_grid.PNG" width="400" height = "425"> 
-
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/grid_lgr_metric_test_data.PNG" width="350" height = "425"> 
-
-Lets see how the model will behave with original test data. 
-
-
-
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/grid_lgr_perfomance_metric.PNG" width="350" height = "425"> 
