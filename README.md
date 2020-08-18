@@ -14,7 +14,7 @@ The data set collected from Kaggle has credit card transactions made in two days
 
 It contains 31 features in total. Because of the confidentiality issues 28 features(V1, V2, V3, V4...V28) are transformed with PCA. The only features which have not been transformed with PCA are 'Time', 'Amount', 'Class'(Response variable- Fraud - 1, Not Fraud - 0). In this project, we build and compare several machine learning models(Logistic Regression, K-Nearest Neighbor, Decision Tree, Support Vector Classifier) to classify the payment transaction to fraud or normal transaction. The performances of algorithms are evaluated through the following performance metrices: confusion matrix, precision, recall, and Precision-Recall curve(appropriate for imbalanced datasets). 
 
-# Confusion Matrix:
+## Confusion Matrix:
 A Confusion matrix is used for evaluating the performance of a classification model. The matrix compares the actual target values with those predicted by the machine learning model. This gives us a holistic view of how well our classification model is performing and what kinds of errors it is making.
 
 ![](images/confusion_matrix.PNG)
@@ -31,18 +31,18 @@ False Negative (FN) : Observation is positive, but is predicted negative.
 True Negative (TN) : Observation is negative, and is predicted to be negative.
 False Positive (FP) : Observation is negative, but is predicted positive.
 
-# Classification Rate/Accuracy:
+## Classification Rate/Accuracy:
 Classification Rate or Accuracy is given by the relation:
 
 ![](images/accuracy.png)
  
-# Recall:
+## Recall:
  
 Recall tells us how many of the actual positive cases we were able to predict correctly with our model. High Recall indicates the class is correctly recognized (a small number of FN).
 
 ![](images/recall.png)
 
-# Precision:
+## Precision:
  
 Precision tells us how many of the correctly predicted cases actually turned out to be positive. High Precision indicates an example labelled as positive is indeed positive (a small number of FP).
 
