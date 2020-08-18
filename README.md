@@ -143,12 +143,12 @@ Even on the original dataframe test data, logistic regression model showed best 
 
 Tuned logistic regression model using GridSearchCV showed recall score of 93% and precission score improved from 95% to 98% on undersample test data when compared with logistic regression test accuracy using default parameters. 
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_mtx_lgr_testdata.PNG" width="350" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_mtx_lgr_testdata.PNG" width="350" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_lgr_org_test_grid.PNG" width="400" height = "425"> 
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/grid_lgr_metric_test_data.PNG" width="350" height = "425"> 
 
 Lets see how the model will behave with original test data. 
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_lgr_org_test_grid.PNG" width="350" height = "425"> 
+
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/grid_lgr_perfomance_metric.PNG" width="350" height = "425"> 
