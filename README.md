@@ -125,15 +125,15 @@ Trained Logistic Regression, k-nearest neighbors(KNN), Decision Tree, Support Ve
 
 Calculated and ploted the confusion matrix for each model
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Confusion_Matrix_Test_Data_Adjacent.PNG" width="550" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Confusion_Matrix_Test_Data_Adjacent.PNG" width="1050" height = "500"> 
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/metrices_all_mdls_adjacent_dflt.PNG" width="350" height = "300"> 
 
 Logistic regression showed best performance on test data with precission score of 95% and recall percentage of 93%. Lets try to check the accuracy of the models by using another large sample of test data.
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_marix_org_test_data_all_mdls.PNG" width="550" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_marix_org_test_data_all_mdls.PNG" width="1050" height = "500"> 
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/org_test_data_metrices_all_models.PNG" width="350" height = 300"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/org_test_data_metrices_all_models.PNG" width="350" height = "300"> 
 
 Even on the original dataframe test data, logistic regression model showed best performance with good recall percentage of 93. However, the precision score went low for all models. Lets try to improve the accuracy of the models by tuning the parameters.
 
