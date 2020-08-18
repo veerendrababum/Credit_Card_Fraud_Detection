@@ -66,5 +66,7 @@ Checking the format of the data types
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/datatypes.PNG" width="250" height = "425"> 
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/dataframe_img1.PNG" width="250" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/dataframe_img2.PNG" width="250" height = "425">
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/dataframe_img1.PNG" width="250" height = "425"> 
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/dataframe_img2.PNG" width="250" height = "425">
 All columns data types have the correct data types and it makes sense to have data types as only int and float since the data set contains only numerical variables(V1 to V28 are transformed with PCA so they are only float type and we observed time and amount columns have numerical values of type float and our response varibale "Class" has two values Fraud - 1, Not Fraud - 0 so it is integer type). Lets move to the next step
