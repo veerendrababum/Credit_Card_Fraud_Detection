@@ -103,19 +103,19 @@ As we observed, this data set is imbalanced so I assume undersampling will helps
 
 Started first with undersampled data and trained the logistic regression model using undersampled training data and classified the response variable using undersampled test data
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Logistic_Regression_Confusion_Matrix_Und_Smpl_Test_Data.PNG" width="350" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Logistic_Regression_Confusion_Matrix_Und_Smpl_Test_Data.PNG" width="550" height = "425"> 
 
 precision and recall, among other metrics:
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/logrgr_pre_rec.PNG" width="350" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/logrgr_pre_rec.PNG" width="450" height = "425"> 
 
 Logistic regression model performed well on undersampled test data with recall score of 93% and precission score of 95%. Lets see how the model will work when we trained with 80% trained data taken from original data)
 
 Trained the logistic regression model with 80% random sample data taken from the original data and used the same undersample test data to classify the response variable
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_matrix_org_data_lgr.PNG" width="350" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_matrix_org_data_lgr.PNG" width="550" height = "425"> 
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/precission_recall_score_org_lgr.PNG" width="350" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/precission_recall_score_org_lgr.PNG" width="450" height = "425"> 
 
 Its clear that the logistic regression model showed low performance when trained with 80% data taken from whole data with true fraud detection rate(recall rate) of 58. Logistic regression Model performed well when we trained with undersampled data with high recall rate of 93%. The same will be applicable for other classification models as well when we are dealing with unbalanced data. Moving forward we will use the undersampled data to train the different classification models.
 
@@ -127,13 +127,13 @@ Calculated and ploted the confusion matrix for each model
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Confusion_Matrix_Test_Data_Adjacent.PNG" width="350" height = "425"> 
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/metrices_all_mdls_adjacent_dflt.PNG" width="350" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/metrices_all_mdls_adjacent_dflt.PNG" width="350" height = "300"> 
 
 Logistic regression showed best performance on test data with precission score of 95% and recall percentage of 93%. Lets try to check the accuracy of the models by using another large sample of test data.
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_marix_org_test_data_all_mdls.PNG" width="350" height = "425"> 
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/org_test_data_metrices_all_models.PNG" width="350" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/org_test_data_metrices_all_models.PNG" width="350" height = 300"> 
 
 Even on the original dataframe test data, logistic regression model showed best performance with good recall percentage of 93. However, the precision score went low for all models. Lets try to improve the accuracy of the models by tuning the parameters.
 
@@ -141,7 +141,7 @@ Even on the original dataframe test data, logistic regression model showed best 
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_lgr_org_test_grid.PNG" width="400" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_mtrx_decs_tree_grid.PNG" width="400" height = "425"> 
 
-<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_svc_grid.PNG" width="400" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_knn_grid.PNG" width="400" height = "425"> 
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_svc_grid.PNG" width="375" height = "425"> <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_knn_grid.PNG" width="375" height = "425"> 
 
 
 Tuned Logistic regression performed well compared with tuned KNN, Decission Tree, and SVM models using GridSearchCV. On original dataframe test data, logistic regresion model identified the 91 fraud transactions out of 98 transactions with recall score of 93% and also it showed best performance to classify the non fraud precission by correctly identifying 55,635 transactions out of total non fraud(56,864) transactions. Logistic regression model did very well to identify the fruad transactions and in the same time model wrongly classified 1229 non fraud transactions as fraud transactions out of total non fraud(56,864) transactions and in terms of statistics, the model misclassifed only 0.02% of non fraud transactions. But in terms of business, there will be chances in production our model can classify the non fraud transactions as fraud transactions and it might end up blocking the customer's card, ulimately it takes the good customers away from the merchants. So its important to make our model to reduce the misclassifcation of non fraud transactions as much as possible since its very important for financial organization to address the risk along with customer satisfaction. 
