@@ -56,14 +56,95 @@ Precision tells us how many of the correctly predicted cases actually turned out
        
 # 2.1 Data Wrangling
 
-Detecting the missing values
+## 2.1.1 Detecting the missing values
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/missing_values-img1.PNG" width="250" height = "425">         <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/missing_values-img2.PNG" width="250" height = "425">       <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/missing_values-img3.PNG" width="250" height = "425">
 
 There is no missing data in the given data set
 
-Checking the format of the data types
+## 2.1.1 Checking the format of the data types
 
 <img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/datatypes.PNG" width="250" height = "425"> 
 
 All columns data types have the correct data types and it makes sense to have data types as only int and float since the data set contains only numerical variables(V1 to V28 are transformed with PCA so they are only float type and we observed time and amount columns have numerical values of type float and our response varibale "Class" has two values Fraud - 1, Not Fraud - 0 so it is integer type). Lets move to the next step
+
+# 2.2 Exploratory Data Analysis
+
+Lets understand the data distribution of non-transformed data- Time, Amount, and Class
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Amount_Distribution.PNG" width="250" height = "425"> 
+
+Distribution shows that most of the transaction are below 70 dollars so there might be chances fraudsters tries to mix up with this group and makes fraudlent transaction with below 70 dollars amount
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Time_Distribution.PNG" width="250" height = "425"> 
+
+Distribution of time for two days shows that most of the transactions are taken place during the daytime and peaked after business hours timing and later it's slowed down until the next day
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Distribution of Fruad Class.PNG" width="250" height = "425"> 
+
+By seeing the distribution of Class(1-Fraud or 0- Not Fraud) its clear that the data is highly imbalanced.
+
+Using heat map, examined the correlation between the variables to make sure there is no strong collinearity between the independent variables 
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/heatmap_correlation.PNG" width="250" height = "425"> 
+
+From the heat map we have observed that all diagonal elements shown strong collinearity since it shows the collinearity between the same variables. We also noticed that there is correlation between Time and V3, Amount and V2,Amount and V5, Amount and V7, Amount and V20. Lets find out the exact correlation coefficient to make sure whether we can consider these correlations or not
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/correlation_values.PNG" width="250" height = "425"> 
+
+# 3. Develop
+      3.1 Develop and Test Default Models
+      3.2 Hyperparameters optimization and Select Best Model
+      3.3 Plot precission recall curve
+# 3.1 Develop and Test Default Models
+# 3.1.1 
+# 3.1.2 Dealing with imbalanced data set
+As we observed, this data set is imbalanced so I assume undersampling will helps us to predict more accurate results. However, there might be chance to miss the important information when we do undersampling. Lets measure the accuracy by building a separate logistic regression model by training with skewed data(80% data from whole data) and another logistic regression model build with undersampled data.
+
+Started first with undersampled data and trained the logistic regression model using undersampled training data and classified the response variable using undersampled test data
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Logistic_Regression_Confusion_Matrix_Und_Smpl_Test_Data.PNG" width="250" height = "425"> 
+
+precision and recall, among other metrics:
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/logrgr_pre_rec.PNG" width="250" height = "425"> 
+
+Logistic regression model performed well on undersampled test data with recall score of 93% and precission score of 95%. Lets see how the model will work when we trained with 80% trained data taken from original data)
+
+Trained the logistic regression model with 80% random sample data taken from the original data and used the same undersample test data to classify the response variable
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_matrix_org_data_lgr.PNG" width="250" height = "425"> 
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/precission_recall_score_org_lgr.PNG" width="250" height = "425"> 
+
+Its clear that the logistic regression model showed low performance when trained with 80% data taken from whole data with true fraud detection rate(recall rate) of 58. Logistic regression Model performed well when we trained with undersampled data with high recall rate of 93%. The same will be applicable for other classification models as well when we are dealing with unbalanced data. Moving forward we will use the undersampled data to train the different classification models.
+
+# 3.1.3 Build and test the following models using the default parameters
+
+Trained Logistic Regression, k-nearest neighbors(KNN), Decision Tree, Support Vector Machine(SVM) default models using the undersample train data and validated the models using undersample test data
+
+Calculated and ploted the confusion matrix for each model
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/Confusion_Matrix_Test_Data_Adjacent.PNG" width="250" height = "425"> 
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/metrices_all_mdls_adjacent_dflt.PNG" width="250" height = "425"> 
+
+Logistic regression showed best performance on test data with precission score of 95% and recall percentage of 93%. Lets try to check the accuracy of the models by using another large sample of test data.
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_marix_org_test_data_all_mdls.PNG" width="250" height = "425"> 
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/org_test_data_metrices_all_models.PNG" width="250" height = "425"> 
+
+Even on the original dataframe test data, logistic regression model showed best performance with good recall percentage of 93. However, the precision score went low for all models. Lets try to improve the accuracy of the models by tuning the parameters.
+
+# 3.2 Hyperparameters tuning
+
+## 3.2.1 Logistic Regression Hyperparameters Tunning
+
+Tuned logistic regression model using GridSearchCV showed recall score of 93% and precission score improved from 95% to 98% on undersample test data when compared with logistic regression test accuracy using default parameters. 
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/confusion_mtx_lgr_testdata.PNG" width="250" height = "425"> 
+
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/conf_lgr_org_test_grid.PNG" width="250" height = "425"> 
+
+Lets see how the model will behave with original test data. 
