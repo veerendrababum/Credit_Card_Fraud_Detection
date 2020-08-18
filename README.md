@@ -3,6 +3,7 @@
 Now a days, credit or debit card’s are the most common method of payments. Using payment cards, consumers can make purchases in-store or online or in-app and it made life easier. On the other side, fraudsters are finding different ways to steal the customer credit/debit card information to make fraudulent purchases. Card fraud is the biggest challenge for organizations particularly those in banking, finance, retail, and e-commerce. Payment card fraud loss reached to $27.85 billion in 2018 across the worldwide and are projected to $35.67 billion in five years and $40.63 in 10 years according to the The Nilson Report, the leading global card and mobile payments trade publication. However, fraud losses per $100 of total sales declined to 6.86¢ from 6.95¢ the prior year.
 
 ![](images/nelson_report_2019.jpg)
+<img src="https://github.com/veerendrababum/Credit_Card_Fraud_Detection/blob/master/images/nelson_report_2019.jpg" width="750">
 
 Source: https://www.prnewswire.com/news-releases/payment-card-fraud-losses-reach-27-85-billion-300963232.html
                                          
@@ -20,7 +21,7 @@ A Confusion matrix is used for evaluating the performance of a classification mo
 
 
 Here,
-Class 1 : Positive
+Class 1 : Positive\n
 Class 2 : Negative
 Definition of the Terms:
 Positive (P) : Observation is positive (for example: is an apple).
@@ -48,4 +49,12 @@ Precision tells us how many of the correctly predicted cases actually turned out
 ![](images/precission.png)
 
 # Precision-Recall curve:
+
+# 2. Data Discovery
+       2.1 Data Wrangling
+       2.2 Exploratory Data Analysis
+       
+# 2.1 Data Wrangling
+
+Detecting the missing values
 
